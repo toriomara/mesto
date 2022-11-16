@@ -1,0 +1,9 @@
+.profile__info-wrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__info-wrapper {
+    place-self: center;
+  }
+}
