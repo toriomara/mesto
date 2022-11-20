@@ -1,0 +1,18 @@
+.profile2__editButton {
+  position: relative;
+  top: 32px;
+  width: 100%;
+  width: 24px;
+  height: 24px;
+  background-image: url('./../../../images/buttons/editButton.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}

@@ -1,31 +1,31 @@
-.profile__name {
+.profile2__name {
+  align-self: end;
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
 }
 
-.profile__name:hover {
+.profile2__name:hover {
   overflow: visible;
 }
 
 @media screen and (max-width: 1280px) {
   .profile__name {
-    max-width: 320px;
+    max-width: 250px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .profile__name {
-    max-width: 220px;
+    max-width: 200px;
     font-size: 32px;
     line-height: 36px;
     text-align: center;
@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 568px) {
   .profile__name {
-    max-width: 180px;
+    max-width: 200px;
     font-size: 27px;
     line-height: 33px;
   }
