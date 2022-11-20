@@ -3,14 +3,22 @@ const popupElement = document.querySelector('.popup');
 const popupCloseButtonElement = popupElement.querySelector(
   '.popup__closeButton'
 );
+
 const popupOpenButtonElement = document.querySelector('.profile__editButton');
 
-// FORM
+const profileNameElement = document.querySelector('.profile__name');
+const profileJobElement = document.querySelector('.profile__job');
+
 let formElement = document.querySelector('.popup__form');
+const nameInput = formElement.querySelector('.form__input_name');
+const jobInput = formElement.querySelector('.form__input_job');
+
+// FORM
 
 const openPopup = function (e) {
   popupElement.classList.add('popup_is-opened');
-  console.log('Open popup clicked');
+  nameInput.value = profileNameElement.textContent;
+  jobInput.value = profileJobElement.textContent;
 };
 
 const closePopup = function () {
@@ -18,16 +26,22 @@ const closePopup = function () {
 };
 
 const closePopupOverlay = function (e) {
-  console.log(e.target, e.currentTarget);
   if (e.target === e.currentTarget) {
     closePopup();
   }
   return;
 };
 
+function formSubmitHandler(evt) {
+  evt.preventDefault();
+  profileNameElement.textContent = nameInput.value;
+  profileJobElement.textContent = jobInput.value;
+  closePopup();
+}
+
 // Регистрируем обработчики событий по клику
+
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
 popupElement.addEventListener('click', closePopupOverlay);
-
-//
+formElement.addEventListener('submit', formSubmitHandler);

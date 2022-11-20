@@ -1,4 +1,4 @@
-.profile__name {
+.profile__job {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -6,37 +6,39 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 42px;
-  line-height: 48px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }
 
-.profile__name:hover {
+.profile__job:hover {
   overflow: visible;
 }
 
 @media screen and (max-width: 1280px) {
-  .profile__name {
+  .profile__job {
     max-width: 320px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .profile__name {
+  .profile__job {
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile__job {
     max-width: 220px;
-    font-size: 32px;
-    line-height: 36px;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .profile__name {
+  .profile__job {
     max-width: 180px;
-    font-size: 27px;
-    line-height: 33px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
   }
 }

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
   <title>Mesto</title>
 </head>
 
@@ -23,7 +24,7 @@
             <h1 class="profile__name">Жак-Ив Кусто</h1>
             <button class="profile__editButton" type="button"></button>
           </div>
-          <p class="profile__description">Исследователь океана</p>
+          <p class="profile__job">Исследователь океана</p>
         </div>
       </div>
       <button class="profile__button" type="button" /></button>
@@ -33,27 +34,27 @@
       <article class="card">
         <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="">
         <div class="card__title">
-          <p class="card__name">
+          <h2 class="card__name">
             Карачаево-Черкессия
-          </p>
+          </h2>
           <button class="card__button" type="button"></button>
         </div>
       </article>
       <article class="card">
         <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="">
         <div class="card__title">
-          <p class="card__name">
+          <h2 class="card__name">
             Гора Эльбрус
-          </p>
+          </h2>
           <button class="card__button" type="button"></button>
         </div>
       </article>
       <article class="card">
         <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="">
         <div class="card__title">
-          <p class="card__name">
+          <h2 class="card__name">
             Домбай
-          </p>
+          </h2>
           <button class="card__button" type="button"></button>
         </div>
       </article>
@@ -62,32 +63,32 @@
           src="https://images.unsplash.com/photo-1644543419167-2cc7a5738665?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
           alt="">
         <div class="card__title">
-          <p class="card__name">
+          <h2 class="card__name">
             Сихотэ-Алинь
-          </p>
+          </h2>
           <button class="card__button" type="button"></button>
         </div>
       </article>
       <article class="card">
         <img class="card__image"
-          src="https://images.unsplash.com/photo-1625474388951-82c404814439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          src="https://images.unsplash.com/photo-1612855619754-64a7c41db296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
           alt="">
         <div class="card__title">
-          <p class="card__name">
-            Гостиный двор
-          </p>
+          <h2 class="card__name">
+            Гора Актуру
+          </h2>
           <button class="card__button" type="button"></button>
         </div>
       </article>
       <article class="card">
         <img class="card__image"
-          src="https://images.unsplash.com/photo-1613327345946-551b8ecf2afe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          src="https://images.unsplash.com/photo-1634028998135-20dfc1b6f34c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80"
           alt="">
         <div class="card__title">
-          <p class="card__name">
-            Москва
-          </p>
-          <button class="card__button" type="button"></button>
+          <h2 class="card__name">
+            Тажеранская степь
+          </h2>
+          <button class="card__button card__button_active" type="button"></button>
         </div>
       </article>
     </section>
@@ -101,8 +102,8 @@
       <button class="popup__closeButton" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form">
-        <input class="form__input">Жак-Ив Кусто</input>
-        <input class="form__input">Исследователь океана</input>
+        <input class="form__input_name" type="text"></input>
+        <input class="form__input_job" type="text"></input>
         <button class="form__saveButton" type="submit">Сохранить</button>
       </form>
     </div>
