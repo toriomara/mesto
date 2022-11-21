@@ -21,13 +21,12 @@
 }
 
 .form__saveButton:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 768px) {
   .form__saveButton {
     width: 238px;
     height: 46px;
-    /* background-image: url('./../../../images/buttons/saveButton.svg'); */
   }
 }
