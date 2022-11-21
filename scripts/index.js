@@ -1,4 +1,4 @@
-// Делаем выборку элементов DOM
+// DOM's elements
 const popupElement = document.querySelector('.popup');
 const popupCloseButtonElement = popupElement.querySelector(
   '.popup__closeButton'
@@ -13,7 +13,7 @@ let formElement = document.querySelector('.popup__form');
 const nameInput = formElement.querySelector('.form__input_name');
 const jobInput = formElement.querySelector('.form__input_job');
 
-// FORM
+// FORM's elements
 
 const openPopup = function (e) {
   popupElement.classList.add('popup_is-opened');
