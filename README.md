@@ -1,17 +1,19 @@
-# Проект: Место
+# Project: Place(JavaScript)
 
-### Обзор
+in this project
 
-* Figma
-* Картинки
+## Badges
 
-**Figma**
+Add badges from somewhere like: [shields.io](https://shields.io/)
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-**Картинки**
+## Authors
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+- [@toriomara](https://www.github.com/toriomara)
 
-Удачи!
+## Demo
+
+https://toriomara.github.io/mesto
