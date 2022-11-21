@@ -25,16 +25,22 @@
 
 @media screen and (max-width: 1024px) {
   .profile__name {
-    max-width: 220px;
+    max-width: 230px;
     font-size: 32px;
     line-height: 36px;
     text-align: center;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .profile__name {
+    max-width: 222px;
+  }
+}
+
 @media screen and (max-width: 568px) {
   .profile__name {
-    max-width: 180px;
+    max-width: 282px;
     font-size: 27px;
     line-height: 33px;
   }
