@@ -1,8 +1,8 @@
 # Project: Place(JavaScript)
 
-## Stack technologies
+## About
 
-in this project
+Educational project Yandex.Practicum "Place". Page with adaptive layout and a simple modal window on JavaScript.
 
 ## Stack technologies
 - HTML5
