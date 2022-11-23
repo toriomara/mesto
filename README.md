@@ -21,3 +21,5 @@ This is the fourth project work on the course Yandex.Practicum "Web Developer". 
 ## Demo
 
 https://toriomara.github.io/mesto
+
+![placeImage](https://user-images.githubusercontent.com/49396676/203643549-d92a8ff1-9cae-4f88-8f8a-7b4e963d718a.png)
