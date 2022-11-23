@@ -12,8 +12,3 @@
   border-width: 0 0 1px;
   border-color: rgba(0, 0, 0, 0.2);
 }
-
-@media screen and (max-width: 568px) {
-  .form__input {
-  }
-}
