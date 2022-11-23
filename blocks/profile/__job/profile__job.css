@@ -1,18 +1,15 @@
 .profile__job {
-  padding: 0;
-  margin: 0;
   width: 100%;
   max-width: 500px;
+  place-self: center;
+  padding: 0;
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-}
-
-.profile__job:hover {
-  overflow: visible;
 }
 
 @media screen and (max-width: 1280px) {

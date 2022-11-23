@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  width: 430px;
-  min-height: 330px;
+  max-width: 430px;
+  max-height: 330px;
   box-sizing: border-box;
   padding: 34px 36px 37px;
   background: #fff;
@@ -17,7 +17,7 @@
   .popup__container {
     width: 100%;
     max-width: 282px;
-    max-height: 346px;
+    max-height: 322px;
     padding: 25px 22px;
   }
 }

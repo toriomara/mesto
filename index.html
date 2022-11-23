@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="./vendor/normalize.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
   <title>Mesto</title>
 </head>
@@ -22,7 +23,7 @@
         <div class="profile__info">
           <div class="profile__info-wrapper">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__editButton" type="button"></button>
+            <button class="profile__edit-button" type="button"></button>
           </div>
           <p class="profile__job">Исследователь океана</p>
         </div>
@@ -32,7 +33,7 @@
     <!-- Cards -->
     <section class="cards">
       <article class="card">
-        <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="">
+        <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия">
         <div class="card__title">
           <h2 class="card__name">
             Карачаево-Черкессия
@@ -41,7 +42,7 @@
         </div>
       </article>
       <article class="card">
-        <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="">
+        <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус">
         <div class="card__title">
           <h2 class="card__name">
             Гора Эльбрус
@@ -50,7 +51,7 @@
         </div>
       </article>
       <article class="card">
-        <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="">
+        <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
         <div class="card__title">
           <h2 class="card__name">
             Домбай
@@ -61,7 +62,7 @@
       <article class="card">
         <img class="card__image"
           src="https://images.unsplash.com/photo-1644543419167-2cc7a5738665?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-          alt="">
+          alt="Сихотэ-Алинь">
         <div class="card__title">
           <h2 class="card__name">
             Сихотэ-Алинь
@@ -72,7 +73,7 @@
       <article class="card">
         <img class="card__image"
           src="https://images.unsplash.com/photo-1612855619754-64a7c41db296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-          alt="">
+          alt="Гора Актуру">
         <div class="card__title">
           <h2 class="card__name">
             Гора Актуру
@@ -83,7 +84,7 @@
       <article class="card">
         <img class="card__image"
           src="https://images.unsplash.com/photo-1634028998135-20dfc1b6f34c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80"
-          alt="">
+          alt="Тажеранская степь">
         <div class="card__title">
           <h2 class="card__name">
             Тажеранская степь
@@ -94,17 +95,19 @@
     </section>
   </main>
   <footer class="footer">
-    © 2022 Mesto Russia
+    <p>
+      © 2022 Mesto Russia
+    </p>
   </footer>
   <!-- Popup -->
   <section class="popup">
     <div class="popup__container">
-      <button class="popup__closeButton" type="button"></button>
+      <button class="popup__close-button" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="form">
-        <input class="form__input-name" type="text" />
-        <input class="form__input-job" type="text" />
-        <button class="form__saveButton" type="submit">Сохранить</button>
+        <input class="form__input form_name" name="name" type="text" />
+        <input class="form__input form_job" name="job" type="text" />
+        <button class="form__save-button" type="submit">Сохранить</button>
       </form>
     </div>
   </section>

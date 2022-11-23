@@ -1,8 +1,8 @@
-.form__input-job {
+.form__input {
   width: 100%;
   padding: 0;
-  margin: 0 0 30px;
-  padding-bottom: 13px;
+  margin-bottom: 30px;
+  padding-bottom: 9px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -11,4 +11,9 @@
   outline: 0;
   border-width: 0 0 1px;
   border-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 568px) {
+  .form__input {
+  }
 }
