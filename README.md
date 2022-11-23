@@ -1,6 +1,14 @@
 # Project: Place(JavaScript)
 
-in this project
+## Technology stack
+
+- HTML
+- CSS
+- Grid
+- Flexbox
+- JavaScript
+
+This is the fourth project work on the course Yandex.Practicum "Web Developer". It is a small page with an adaptive layout and the logic of opening a modal window and changing the title (JavaScript)
 
 ## Badges
 
