@@ -23,8 +23,4 @@ export const initialCards = [
     title: 'Тажеранская степь',
     link: 'https://images.unsplash.com/photo-1634028998135-20dfc1b6f34c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80',
   },
-  {
-    title: 'w 126',
-    link: 'https://images.unsplash.com/photo-1669962367460-00b711b2e3f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
-  },
 ];

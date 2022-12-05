@@ -39,7 +39,7 @@ const popupImageElement = document.querySelector('.popup_image');
 const popupImage = document.querySelector('.image-container__image');
 const popupCaption = document.querySelector('.image-container__caption');
 const popupImageCloseButtonElement = popupImageElement.querySelector(
-  '.image__close-button'
+  '.image-container__close-button'
 );
 
 const createCard = (item) => {
@@ -69,13 +69,11 @@ const handleImageOpen = (item) => {
 };
 
 const handleClickActiveButton = (e) => {
-  e.target.closest('.card__button').classList.toggle('card__button_active');
-  console.log('1');
+  e.target.classList.toggle('card__button_active');
 };
 
 const handleClickDeleteButton = (e) => {
   e.target.closest('.card').remove();
-  console.log('1');
 };
 
 const renderCard = (item) => {
