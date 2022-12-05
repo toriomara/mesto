@@ -33,7 +33,7 @@ const formCardElement = popupCardElement.querySelector(
 const formCardNameInput = popupCardElement.querySelector('[name="card-name"]');
 const formCardLinkInput = popupCardElement.querySelector('[name="card-link"]');
 
-//Image
+// Image
 
 const popupImageElement = document.querySelector('.popup_image');
 const popupImage = document.querySelector('.image-container__image');
@@ -70,11 +70,12 @@ const handleImageOpen = (item) => {
 
 const handleClickActiveButton = (e) => {
   e.target.closest('.card__button').classList.toggle('card__button_active');
-  console.log(e);
+  console.log('1');
 };
 
 const handleClickDeleteButton = (e) => {
   e.target.closest('.card').remove();
+  console.log('1');
 };
 
 const renderCard = (item) => {
