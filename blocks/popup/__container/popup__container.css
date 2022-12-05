@@ -1,10 +1,10 @@
 .popup__container {
   position: relative;
-  display: grid;
+  /* display: flex;
+  flex-direction: column;
+  width: 100%; */
   align-self: center;
   justify-self: center;
-  flex-direction: column;
-  width: 100%;
   max-width: 430px;
   max-height: 330px;
   box-sizing: border-box;

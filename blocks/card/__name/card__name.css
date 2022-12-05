@@ -1,4 +1,5 @@
 .card__name {
+  width: 100%;
   max-width: 215px;
   white-space: nowrap;
   overflow: hidden;
