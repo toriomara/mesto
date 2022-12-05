@@ -62,33 +62,34 @@
         <button class="form__save-button" type="submit">Сохранить</button>
       </form>
     </div>
+  </section>
 
-    <!-- Popup Image-->
-    <section class="popup popup_image">
-      <div class="image-container">
-        <figure class="image-container__figure">
-          <button class="popup__close-button popup__close-button_image image-container__close-button"
-            type="button"></button>
-          <img class="image-container__image" />
-          <figcaption class='image-container__caption'>
-          </figcaption>
-        </figure>
+  <!-- Popup Image-->
+  <section class="popup popup_image">
+    <div class="image-container">
+      <figure class="image-container__figure">
+        <button class="popup__close-button popup__close-button_image image-container__close-button"
+          type="button"></button>
+        <img class="image-container__image" />
+        <figcaption class='image-container__caption'>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Template Card -->
+  <template id="card-template">
+    <article class="card">
+      <button class="card__button_trash" type="button"></button>
+      <img class="card__image" />
+      <div class="card__title">
+        <h2 class="card__name">
+        </h2>
+        <button class="card__button" type="button"></button>
       </div>
-    </section>
-
-    <!-- Template Card -->
-    <template id="card-template">
-      <article class="card">
-        <button class="card__button_trash" type="button"></button>
-        <img class="card__image" />
-        <div class="card__title">
-          <h2 class="card__name">
-          </h2>
-          <button class="card__button" type="button"></button>
-        </div>
-      </article>
-    </template>
-    <script src="./scripts/index.js" type="module"></script>
+    </article>
+  </template>
+  <script src="./scripts/index.js" type="module"></script>
 </body>
 
 </html>
