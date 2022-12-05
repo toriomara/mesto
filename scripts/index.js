@@ -19,7 +19,7 @@ const jobInput = formElement.querySelector('.form__input_profile_job');
 const popupCardElement = document.querySelector('.popup_card');
 const popupCardOpenButtonElement = document.querySelector('.profile__button');
 const popupCardCloseButtonElement = popupCardElement.querySelector(
-  '.card__close-button'
+  '.popup__close-button_card'
 );
 
 const cardsContainer = document.querySelector('.cards');
