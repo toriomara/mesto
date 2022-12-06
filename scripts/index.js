@@ -90,7 +90,6 @@ initialCards.forEach((item) => {
 
 const openPopup = (element) => {
   element.classList.add('popup_opened');
-  initialInputValue();
 };
 
 const closePopup = (element) => {
@@ -103,7 +102,6 @@ const initialInputValue = () => {
 };
 
 // Card
-
 // const closePopupOverlay = (e) => {
 //   if (e.target === e.currentTarget) {
 //     closePopup();
@@ -134,7 +132,7 @@ const handleFormSubmit = (e) => {
 /--------------------- Register event listener by click ---------------------/;
 
 popupOpenButtonElement.addEventListener('click', () => {
-  openPopup(popupProfileElement);
+  openPopup(popupProfileElement, initialInputValue());
 });
 popupCloseButtonElement.addEventListener('click', () => {
   closePopup(popupProfileElement);
