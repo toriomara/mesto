@@ -11,7 +11,7 @@ const popupCloseButtonElement = popupProfileElement.querySelector(
 const profileNameElement = document.querySelector('.profile__name');
 const profileJobElement = document.querySelector('.profile__job');
 
-let formElement = document.querySelector('.form');
+const formElement = document.querySelector('.form');
 const nameInput = formElement.querySelector('.form__input_profile_name');
 const jobInput = formElement.querySelector('.form__input_profile_job');
 
@@ -48,6 +48,7 @@ const createCard = (item) => {
   cardTitle.textContent = item.title;
   const img = card.querySelector('.card__image');
   img.src = item.link;
+  img.alt = item.title;
 
   const cardButtonDelete = card.querySelector('.card__button_trash');
   cardButtonDelete.addEventListener('click', handleClickDeleteButton);
@@ -65,6 +66,7 @@ const createCard = (item) => {
 const handleImageOpen = (item) => {
   popupImage.src = item.link;
   popupCaption.textContent = item.title;
+  popupImage.alt = item.title;
   openPopup(popupImageElement);
 };
 
@@ -109,7 +111,7 @@ const initialInputValue = () => {
 //   return;
 // };
 
-const formSubmitHandler = (e) => {
+const handleChangeProfile = (e) => {
   e.preventDefault();
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
@@ -124,9 +126,9 @@ const handleFormSubmit = (e) => {
       link: formCardLinkInput.value,
     })
   );
+  closePopup(popupCardElement);
   formCardNameInput.value = '';
   formCardLinkInput.value = '';
-  closePopup(popupCardElement);
 };
 
 /--------------------- Register event listener by click ---------------------/;
@@ -138,7 +140,7 @@ popupCloseButtonElement.addEventListener('click', () => {
   closePopup(popupProfileElement);
 });
 // popupElement.addEventListener('click', closePopupOverlay);
-formElement.addEventListener('submit', formSubmitHandler);
+formElement.addEventListener('submit', handleChangeProfile);
 
 // Card
 popupCardOpenButtonElement.addEventListener('click', () => {
