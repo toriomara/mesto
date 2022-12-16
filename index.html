@@ -44,10 +44,20 @@
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="form" name="popup-form">
-        <input class="form__input form__input_profile_name" name="name" type="text" placeholder="Имя" />
-        <input class="form__input form__input_profile_job" name="job" type="text" placeholder="Сфера деятельности" />
-        <button class="form__save-button" type="submit">Сохранить</button>
+      <form class="form" name="popup-form" novalidate>
+        <fieldset class="form__set">
+          <label for="name">
+            <input class="form__input form__input_profile_name" id="name-profile" name="name" type="text"
+              placeholder="Имя" minlength="2" maxlength="40" required />
+            <span id="name-profile-error" class="form__input-error"></span>
+          </label>
+          <label for="job">
+            <input class="form__input form__input_profile_job" id="job-profile" name="job" type="text"
+              placeholder="Сфера деятельности" minlength="2" maxlength="200" required />
+            <span id="job-profile-error" class="form__input-error"></span>
+          </label>
+          <button class="form__save-button" type="submit">Сохранить</button>
+        </fieldset>
       </form>
     </div>
   </section>
@@ -56,11 +66,16 @@
     <div class="popup__container">
       <button class="popup__close-button popup__close-button_card" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="form" name="popup-form_card">
-        <input class="form__input form__input_card_name" name="card-name" type="text" placeholder="Название" />
-        <input class="form__input form__input_card_link" name="card-link" type="text"
-          placeholder="Ведите адрес ссылки" />
-        <button class="form__save-button" type="submit">Сохранить</button>
+      <form class="form" name="popup-form_card" novalidate>
+        <fieldset class="form__set">
+          <input class="form__input form__input_card_name" id="name-card" name="card-name" type="text"
+            placeholder="Название" minlength="2" maxlength="30" required />
+          <span id="name-card-error" class="form__input-error"></span>
+          <input class="form__input form__input_card_link" id="link-card" name="card-link" type="url"
+            placeholder="Ведите адрес ссылки" required />
+          <span id="link-card-error" class="form__input-error"></span>
+          <button class="form__save-button" type="submit">Сохранить</button>
+        </fieldset>
       </form>
     </div>
   </section>
@@ -90,6 +105,7 @@
       </div>
     </article>
   </template>
+  <script src="./scripts/validate.js" type="module"></script>
   <script src="./scripts/index.js" type="module"></script>
 </body>
 
