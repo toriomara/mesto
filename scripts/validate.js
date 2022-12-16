@@ -8,14 +8,14 @@ const config = {
 }
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(config.inputErrorClass);
   errorElement.textContent = errorMessage;
   errorElement.classList.add(config.errorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-  const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.classList.remove(config.errorClass);
   errorElement.textContent = '';
@@ -36,16 +36,16 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(config.inactiveButtonClass);
-    buttonElement.disabled = 'disabled';
-  } else {
-    buttonElement.classList.remove(config.inactiveButtonClass);
-    buttonElement.disabled = false;
+  buttonElement.classList.add(config.inactiveButtonClass);
+  buttonElement.disabled = true;
+} else {
+  buttonElement.classList.remove(config.inactiveButtonClass);
+  buttonElement.disabled = false;
   }
 }
 
 const setEventListeners = (formElement, config) => {
-  const inputList = [...document.querySelectorAll(config.inputSelector)];
+  const inputList = [...formElement.querySelectorAll(config.inputSelector)];
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
   toggleButtonState(inputList, buttonElement, config);
   inputList.forEach((inputElement) => {
@@ -62,7 +62,7 @@ const enableValidation = (config) => {
     formElement.addEventListener('submit', (e) => {
       e.preventDefault();
     });
-    const fieldsetList = [...formElement.querySelectorAll('.form__set')];
+    const fieldsetList = [...document.querySelectorAll('.form__set')];
     fieldsetList.forEach((fieldSet) => {
       setEventListeners(fieldSet, config);
     }); 
@@ -70,9 +70,6 @@ const enableValidation = (config) => {
 };
 
 enableValidation(config); 
-
-
-
 
 // const enableValidation = (config) => {
 //   const forms = [...document.querySelectorAll(config.formSelector)];

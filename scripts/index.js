@@ -95,7 +95,6 @@ initialCards.forEach((item) => {
   renderCard(item);
 });
 
-
 /--------------------- FORM's elements ---------------------/;
 
 const openPopup = (element) => {
