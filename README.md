@@ -8,7 +8,12 @@
 - Flexbox
 - JavaScript
 
-This is the fourth project work on the course Yandex.Practicum "Web Developer". It is a small page with an adaptive layout and the logic of opening a modal window and changing the title (JavaScript)
+This is the 6th project work on the course Yandex.Practicum "Web Developer". It is a small page with an adaptive layout and the logic of opening a modal window and changing the title (JavaScript).
+
+**Implemented in the project:**
+  * validation (input fields are validated as they are entered);
+  * developments (when clicking outside the modal window or pressing the 'ESC' key, the window closes)
+
 
 ## Badges
 

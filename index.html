@@ -22,12 +22,12 @@
         <div class="profile__info">
           <div class="profile__info-wrapper">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
           </div>
           <p class="profile__job">Исследователь океана</p>
         </div>
       </div>
-      <button class="profile__button" type="button"></button>
+      <button class="profile__button" type="button" aria-label="Добавить"></button>
     </section>
     <!-- Cards -->
     <section class="cards">
@@ -42,7 +42,7 @@
   <!-- Popup Profile-->
   <section class="popup popup_profile">
     <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="form" name="popup-form" novalidate>
         <fieldset class="form__set">
@@ -56,7 +56,7 @@
               placeholder="Сфера деятельности" minlength="2" maxlength="200" required />
             <span class="form__input-error job-profile-error"></span>
           </label>
-          <button class="form__save-button" type="submit">Сохранить</button>
+          <button class="form__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
         </fieldset>
       </form>
     </div>
@@ -64,7 +64,7 @@
   <!-- Popup Card-->
   <section class="popup popup_card">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-button_card" type="button"></button>
+      <button class="popup__close-button popup__close-button_card" type="button" aria-label="Закрыть"></button>
       <h2 class="popup__title">Новое место</h2>
       <form class="form" name="popup-form_card" novalidate>
         <fieldset class="form__set">
@@ -74,7 +74,7 @@
           <input class="form__input form__input_card_link" id="link-card" name="card-link" type="url"
             placeholder="Ведите адрес ссылки" required />
           <span class="form__input-error link-card-error"></span>
-          <button class="form__save-button" type="submit">Сохранить</button>
+          <button class="form__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
         </fieldset>
       </form>
     </div>
@@ -84,8 +84,8 @@
   <section class="popup popup_image">
     <div class="image-container">
       <figure class="image-container__figure">
-        <button class="popup__close-button popup__close-button_image image-container__close-button"
-          type="button"></button>
+        <button class="popup__close-button popup__close-button_image image-container__close-button" type="button"
+          aria-label="Закрыть"></button>
         <img class="image-container__image" />
         <figcaption class='image-container__caption'>
         </figcaption>
@@ -96,17 +96,16 @@
   <!-- Template Card -->
   <template id="card-template">
     <article class="card">
-      <button class="card__button_trash" type="button"></button>
+      <button class="card__button_trash" type="button" aria-label="Удалить"></button>
       <img class="card__image" />
       <div class="card__title">
         <h2 class="card__name">
         </h2>
-        <button class="card__button" type="button"></button>
+        <button class="card__button" type="button" aria-label="Нравится"></button>
       </div>
     </article>
   </template>
   <script src="./scripts/index.js" type="module"></script>
-  <script src="./scripts/validate.js" type="module"></script>
 </body>
 
 </html>
