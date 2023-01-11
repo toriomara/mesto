@@ -1,3 +1,10 @@
+// Александр, спасибо большое за ревью!
+
+// Не нашёл пока как сбросить ошибки в модалке изменения профайла 
+// (предполагаю, что можно сделать это с помощью localStorage или 
+// же добавив ещё функции, сохраняя введённый пользователем текст). 
+// Я думаю, что смогу сделать это чуть позже
+
 import { initialCards, config } from './constants.js';
 import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
@@ -36,7 +43,6 @@ formValidationCard.enableValidation();
 const popupCaption = document.querySelector('.image-container__caption');
 const popupImageElement = document.querySelector('.popup_image');
 const popupImage = popupImageElement.querySelector('.image-container__image');
-const saveCardButton = popupCardElement.querySelector('.form__save-button');
 const popups = document.querySelectorAll('.popup');
 
 /--------------------- FUNCTIONS ---------------------/
@@ -64,7 +70,6 @@ initialCards.forEach((item) => {
 const openPopup = (element) => {
   element.classList.add('popup_opened');
   document.addEventListener('keydown', handleKeyUp);
-  formValidationCard.disableBtn()
 };
 
 const closePopup = (element) => {
@@ -109,20 +114,18 @@ const handleCardSubmit = (e) => {
       formCardLinkInput.value,
       handleImageOpen,
       '#card-template'
-    )
-  );
+    ));
   closePopup(popupCardElement);
-  e.target.reset()
-  formValidationCard.disableBtn(saveCardButton, config);
+  e.target.reset();
 };
 
 /--------------------- LISTENERS ---------------------/
 
 popupProfileEditButton.addEventListener('click', () => {
-  openPopup(popupProfileElement), fillEditPopupInputs();
+  openPopup(popupProfileElement), fillEditPopupInputs(), formValidationProfile.resetErrors();
 });
 popupCardOpenButtonElement.addEventListener('click', () => {
-  openPopup(popupCardElement);
+  openPopup(popupCardElement), formValidationCard.disableBtn(), formValidationCard.resetErrors();
 });
 profileFormElement.addEventListener('submit', handleChangeProfile);
 formCardElement.addEventListener('submit', handleCardSubmit);
