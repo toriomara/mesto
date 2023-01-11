@@ -29,6 +29,7 @@ export class Card {
   
   generateCard() {
     this._element = this._getTemplate();
+    console.log(this._element)
     this._img = this._element.querySelector(Card.selectors.img);
     this._element.querySelector(Card.selectors.title).textContent = this._title;
     this._img.src = this._link;

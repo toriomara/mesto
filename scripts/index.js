@@ -36,7 +36,7 @@ formValidationCard.enableValidation();
 const popupCaption = document.querySelector('.image-container__caption');
 const popupImageElement = document.querySelector('.popup_image');
 const popupImage = popupImageElement.querySelector('.image-container__image');
-// const saveCardButton = popupCardElement.querySelector('.form__save-button');
+const saveCardButton = popupCardElement.querySelector('.form__save-button');
 const popups = document.querySelectorAll('.popup');
 
 /--------------------- FUNCTIONS ---------------------/
@@ -104,14 +104,16 @@ const handleChangeProfile = (e) => {
 const handleCardSubmit = (e) => {
   e.preventDefault();
   cardsContainer.prepend(
-    createCard({
-      title: formCardNameInput.value,
-      link: formCardLinkInput.value,
-    })
-    );
+    createCard(
+      formCardNameInput.value,
+      formCardLinkInput.value,
+      handleImageOpen,
+      '#card-template'
+    )
+  );
   closePopup(popupCardElement);
   e.target.reset()
-  formValidationCard.disableBtn();
+  formValidationCard.disableBtn(saveCardButton, config);
 };
 
 /--------------------- LISTENERS ---------------------/
