@@ -115,6 +115,7 @@ const handleCardSubmit = (e) => {
       handleImageOpen,
       '#card-template'
     ));
+    ));
   closePopup(popupCardElement);
   e.target.reset();
 };
