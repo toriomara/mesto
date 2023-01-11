@@ -36,7 +36,7 @@ formValidationCard.enableValidation();
 const popupCaption = document.querySelector('.image-container__caption');
 const popupImageElement = document.querySelector('.popup_image');
 const popupImage = popupImageElement.querySelector('.image-container__image');
-const saveCardButton = popupCardElement.querySelector('.form__save-button');
+// const saveCardButton = popupCardElement.querySelector('.form__save-button');
 const popups = document.querySelectorAll('.popup');
 
 /--------------------- FUNCTIONS ---------------------/
@@ -64,7 +64,6 @@ initialCards.forEach((item) => {
 const openPopup = (element) => {
   element.classList.add('popup_opened');
   document.addEventListener('keydown', handleKeyUp);
-  formValidationCard.disableBtn()
 };
 
 const closePopup = (element) => {
@@ -109,11 +108,10 @@ const handleCardSubmit = (e) => {
       formCardLinkInput.value,
       handleImageOpen,
       '#card-template'
-    )
-  );
+    ));
   closePopup(popupCardElement);
-  e.target.reset()
-  formValidationCard.disableBtn(saveCardButton, config);
+  e.target.reset();
+  // formValidationCard.disableBtn(saveCardButton, config);
 };
 
 /--------------------- LISTENERS ---------------------/
@@ -122,7 +120,7 @@ popupProfileEditButton.addEventListener('click', () => {
   openPopup(popupProfileElement), fillEditPopupInputs();
 });
 popupCardOpenButtonElement.addEventListener('click', () => {
-  openPopup(popupCardElement);
+  openPopup(popupCardElement), formValidationCard.disableBtn();
 });
 profileFormElement.addEventListener('submit', handleChangeProfile);
 formCardElement.addEventListener('submit', handleCardSubmit);

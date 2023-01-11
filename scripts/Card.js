@@ -1,6 +1,6 @@
 export class Card {
 
-  static selectors = {
+  static _selectors = {
     template: '#card-template',
     card: '.card',
     title: '.card__name',
@@ -21,7 +21,7 @@ export class Card {
     const cardElement = document
       .querySelector(this._templateSelector)
       .content
-      .querySelector(Card.selectors.card)
+      .querySelector(Card._selectors.card)
       .cloneNode(true);
 
     return cardElement;
@@ -30,8 +30,8 @@ export class Card {
   generateCard() {
     this._element = this._getTemplate();
     console.log(this._element)
-    this._img = this._element.querySelector(Card.selectors.img);
-    this._element.querySelector(Card.selectors.title).textContent = this._title;
+    this._img = this._element.querySelector(Card._selectors.img);
+    this._element.querySelector(Card._selectors.title).textContent = this._title;
     this._img.src = this._link;
     this._img.alt = this._title;
     this._setEventListeners();
@@ -44,19 +44,19 @@ export class Card {
   }
   
   _handleButtonLike() {
-    this._element.querySelector(Card.selectors.likeButton).classList.toggle('card__button_active');
+    this._element.querySelector(Card._selectors.likeButton).classList.toggle('card__button_active');
   }
 
   _setEventListeners() {
-    this._element.querySelector(Card.selectors.trashButton).addEventListener('click', () => {
+    this._element.querySelector(Card._selectors.trashButton).addEventListener('click', () => {
       this._handleButtonDelete();
     });
 
-    this._element.querySelector(Card.selectors.likeButton).addEventListener('click', () => {
+    this._element.querySelector(Card._selectors.likeButton).addEventListener('click', () => {
       this._handleButtonLike();
     });
 
-    this._element.querySelector(Card.selectors.img).addEventListener('click', () => {
+    this._element.querySelector(Card._selectors.img).addEventListener('click', () => {
       this._handleImageOpen(this._title, this._link);
     });
   }
