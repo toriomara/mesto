@@ -5,7 +5,7 @@ export const config = {
   inactiveButtonClass: 'form__save-button_disabled',
   inputErrorClass: 'form__input_type_error',
   errorClass: 'form__input-error_active',
-}
+};
 
 export const initialCards = [
   {
@@ -33,3 +33,25 @@ export const initialCards = [
     link: 'https://images.unsplash.com/photo-1634028998135-20dfc1b6f34c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80',
   },
 ];
+
+export const popupProfileElement = document.querySelector('.popup_profile');
+export const popupProfileEditButton = document.querySelector(
+  '.profile__edit-button'
+);
+export const profileNameElement = document.querySelector('.profile__name');
+export const profileJobElement = document.querySelector('.profile__job');
+export const profileFormElement = popupProfileElement.querySelector('.form');
+
+export const popupImageElement = document.querySelector('.popup_image');
+
+export const popupCardElement = document.querySelector('.popup_card');
+export const popupCardOpenButtonElement =
+  document.querySelector('.profile__button');
+export const cardsContainer = document.querySelector('.cards');
+
+export const nameInput = profileFormElement.querySelector(
+  '.form__input_profile_name'
+);
+export const jobInput = profileFormElement.querySelector(
+  '.form__input_profile_job'
+);
