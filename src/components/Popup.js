@@ -1,6 +1,6 @@
 export class Popup {
-  constructor(popupSelector) {
-    this._popup = popupSelector;
+  constructor(popupElement) {
+    this._popup = popupElement;
   }
 
   _handleEscClose = (e) => {
