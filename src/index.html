@@ -17,7 +17,10 @@
     <!-- Profile -->
     <section class="profile">
       <div class="profile__main">
-        <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Аватар" />
+        <div class="profile__avatar-container">
+          <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Аватар" />
+          <button class="profile__avatar-edit-button" type="button" aria-label="Смена аватара"></button>
+        </div>
         <div class="profile__info">
           <div class="profile__info-wrapper">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -29,15 +32,16 @@
       <button class="profile__button" type="button" aria-label="Добавить"></button>
     </section>
     <!-- Cards -->
-    <section class="cards">
+    <section class="cards" id="cards">
 
     </section>
   </main>
   <footer class="footer">
     <p class='footer__copyright'>
-      © 2022 Mesto Russia
+      © 2023 Mesto Russia
     </p>
   </footer>
+
   <!-- Popup Profile-->
   <section class="popup popup_profile">
     <div class="popup__container">
@@ -60,6 +64,7 @@
       </form>
     </div>
   </section>
+
   <!-- Popup Card-->
   <section class="popup popup_card">
     <div class="popup__container">
@@ -92,6 +97,33 @@
     </div>
   </section>
 
+  <!-- Popup Confirm-->
+  <section class="popup popup_confirm">
+    <div class="popup__container">
+      <button class="popup__close-button popup__close-button_card" type="button" aria-label="Закрыть"></button>
+      <h2 class="popup__title">Вы уверены?</h2>
+      <form class="form" name="popup-form" novalidate>
+        <button class="form__save-button" type="button" aria-label="Да">Да</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Popup Avatar-->
+  <section class="popup popup_avatar">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form class="form" name="popup-form_avatar" novalidate>
+        <fieldset class="form__set">
+          <input class="form__input form__input_avatar" id="avatar-card" name="card-avatar" type="url"
+            placeholder="Ведите адрес ссылки на аватар" required />
+          <span class="form__input-error avatar-card-error"></span>
+          <button class="form__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
   <!-- Template Card -->
   <template id="card-template">
     <article class="card">
@@ -99,7 +131,10 @@
       <img class="card__image" />
       <div class="card__title">
         <h2 class="card__name"></h2>
-        <button class="card__button" type="button" aria-label="Нравится"></button>
+        <div>
+          <button class="card__button" type="button" aria-label="Нравится"></button>
+          <span class="card__likes-counter">0</span>
+        </div>
       </div>
     </article>
   </template>
