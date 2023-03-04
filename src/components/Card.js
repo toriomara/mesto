@@ -32,9 +32,12 @@ export class Card {
     return cardElement;
   }
 
+  likeToggler() {
+    this._likeButton.classList.toggle('card__button_active');
+  }
+
   _likeCard() {
     this._handleLikeClick();
-    this._likeButton.classList.toggle('card__button_active');
   }
 
   isLiked() {

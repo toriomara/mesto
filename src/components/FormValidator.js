@@ -1,12 +1,12 @@
 export class FormValidator {
-  constructor(config, popupSelector) {
+  constructor(config, formElement) {
     this._inputSelector = config.inputSelector;
     this._submitButtonSelector = config.submitButtonSelector;
     this._inactiveButtonClass = config.inactiveButtonClass;
     this._inputErrorClass = config.inputErrorClass;
     this._errorClass = config.errorClass;
 
-    this._element = document.querySelector(`${popupSelector}`);
+    this._element = document.querySelector(formElement);
 
     this._inputList = [...this._element.querySelectorAll(this._inputSelector)];
     this._buttonElement = this._element.querySelector(

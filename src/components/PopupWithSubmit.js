@@ -24,9 +24,9 @@ export class PopupWithSubmit extends Popup {
 
   changeButtonTextForLoading(isSending) {
     if (isSending) {
-      this._button.textContent = 'Удаление';
+      this._button.textContent = 'Удаление...';
     } else {
-      this._button.textContent = 'Да';
+      this._button.textContent = this._buttonDefaultText;
     }
   }
 }

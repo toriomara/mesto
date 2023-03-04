@@ -1,5 +1,5 @@
 export const defaultFormConfig = {
-  // formSelector: '.form',
+  formSelector: '.form',
   inputSelector: '.form__input',
   submitButtonSelector: '.form__save-button',
   inactiveButtonClass: 'form__save-button_disabled',
@@ -26,7 +26,15 @@ export const userInfoConfig = {
   userAvatarSelector: '.profile__avatar',
 };
 
+// export const mestoApiConfig = {
+//   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-59/',
+//   token: 'b063a258-13a4-49af-ad5b-48e5626339ec',
+// };
+
 export const mestoApiConfig = {
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-59/',
-  token: 'b063a258-13a4-49af-ad5b-48e5626339ec',
+  headers: {
+    authorization: 'b063a258-13a4-49af-ad5b-48e5626339ec',
+    'Content-Type': 'application/json',
+  },
 };

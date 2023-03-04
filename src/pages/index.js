@@ -20,8 +20,6 @@ const openCardFormButton = document.querySelector('.profile__button');
 const openAvatarFormButton = document.querySelector(
   '.profile__avatar-container'
 );
-const nameInput = document.querySelector('.form__input_profile_name');
-const descriptionInput = document.querySelector('.form__input_profile_job');
 
 const api = new Api(mestoApiConfig);
 const userInfo = new UserInfo(userInfoConfig);
@@ -66,7 +64,10 @@ const createCard = (data) => {
       } else {
         api
           .addLikeCard(card)
-          .then((res) => card.updateLikes(res))
+          .then((res) => {
+            card.updateLikes(res);
+            card.likeToggler();
+          })
           .catch((err) => console.log(err));
       }
     },
@@ -163,8 +164,7 @@ changeAvatarPopup.setEventListeners();
 
 openEditFormButton.addEventListener('click', () => {
   const dataInfo = userInfo.getUserInfo();
-  nameInput.value = dataInfo.name;
-  descriptionInput.value = dataInfo.about;
+  userInfoPopup.setInputValues({ name: dataInfo.name, job: dataInfo.about });
   editFormValidator.resetErrors();
   userInfoPopup.open();
 });

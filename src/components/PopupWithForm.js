@@ -19,6 +19,12 @@ export class PopupWithForm extends Popup {
     return this._inputListValues;
   }
 
+  setInputValues(data) {
+    this._inputList.forEach((input) => {
+      input.value = data[input.name];
+    });
+  }
+
   setEventListeners() {
     this._popupForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -34,9 +40,9 @@ export class PopupWithForm extends Popup {
 
   changeButtonTextForLoading(isSending) {
     if (isSending) {
-      this._button.textContent = 'Сохранение';
+      this._button.textContent = 'Сохранение...';
     } else {
-      this._buttonDefaultText;
+      this._button.textContent = this._buttonDefaultText;
     }
   }
 }

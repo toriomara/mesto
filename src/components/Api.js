@@ -1,7 +1,11 @@
 export class Api {
-  constructor({ baseUrl, token }) {
+  constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
-    this._token = token;
+    this._headers = headers;
+  }
+
+  _request(url, options) {
+    return fetch(url, options).then(this._getResponse);
   }
 
   _getResponse(res) {
@@ -9,89 +13,77 @@ export class Api {
   }
 
   getInitialCards() {
-    return fetch(`${this._baseUrl}cards`, {
+    return this._request(`${this._baseUrl}cards`, {
       method: 'GET',
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._getResponse);
+      headers: this._headers,
+    });
   }
 
   addCard({ name, link }) {
-    return fetch(`${this._baseUrl}cards`, {
+    return this._request(`${this._baseUrl}cards`, {
       method: 'POST',
-      headers: {
-        authorization: this._token,
-        'Content-Type': 'application/json',
-      },
+      headers: this._headers,
       body: JSON.stringify({
         name: name,
         link: link,
       }),
-    }).then(this._getResponse);
+    });
   }
 
   removeCard(card) {
     this._cardId = card.cardId;
-    return fetch(`${this._baseUrl}cards/${this._cardId}`, {
+    return this._request(`${this._baseUrl}cards/${this._cardId}`, {
       method: 'DELETE',
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._getResponse);
+      headers: this._headers,
+    });
   }
 
   addLikeCard(card) {
     this._cardId = card.cardId;
-    return fetch(`${this._baseUrl}cards/likes/${this._cardId}`, {
+    return this._request(`${this._baseUrl}cards/likes/${this._cardId}`, {
       method: 'PUT',
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._getResponse);
+      headers: this._headers,
+    });
   }
 
   removeLikeCard(card) {
     this._cardId = card.cardId;
-    return fetch(`${this._baseUrl}cards/likes/${this._cardId}`, {
+    return this._request(`${this._baseUrl}cards/likes/${this._cardId}`, {
       method: 'DELETE',
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._getResponse);
+      headers: this._headers,
+    });
   }
 
   getUserInfo() {
-    return fetch(`${this._baseUrl}users/me`, {
+    return this._request(`${this._baseUrl}users/me`, {
       method: 'GET',
-      headers: {
-        authorization: this._token,
-      },
-    }).then(this._getResponse);
+      headers: this._headers,
+    });
   }
 
+  // getUserInfo() {
+  //   return fetch(`${this._baseUrl}users/me`, {
+  //     method: 'GET',
+  //     headers: this._headers,
+  //   }).then(this._getResponse);
+  // }
+
   setUserInfo({ name, about }) {
-    return fetch(`${this._baseUrl}users/me`, {
+    return this._request(`${this._baseUrl}users/me`, {
       method: 'PATCH',
-      headers: {
-        authorization: this._token,
-        'Content-Type': 'application/json',
-      },
+      headers: this._headers,
       body: JSON.stringify({
         name: name,
         about: about,
       }),
-    }).then(this._getResponse);
+    });
   }
 
   setUserAvatar(avatar) {
-    return fetch(`${this._baseUrl}users/me/avatar`, {
+    return this._request(`${this._baseUrl}users/me/avatar`, {
       method: 'PATCH',
-      headers: {
-        authorization: this._token,
-        'Content-Type': 'application/json',
-      },
+      headers: this._headers,
       body: JSON.stringify({ avatar }),
-    }).then(this._getResponse);
+    });
   }
 }
